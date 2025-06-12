@@ -1001,18 +1001,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "commonware-codec-fuzz"
-version = "0.0.1"
-dependencies = [
- "arbitrary",
- "bytes",
- "commonware-codec",
- "libfuzzer-sys",
- "paste",
- "thiserror 2.0.12",
-]
-
-[[package]]
 name = "commonware-consensus"
 version = "0.0.54"
 dependencies = [
@@ -1093,6 +1081,18 @@ dependencies = [
  "tracing",
  "tracing-subscriber",
  "uuid",
+]
+
+[[package]]
+name = "commonware-fuzz"
+version = "0.0.1"
+dependencies = [
+ "arbitrary",
+ "bytes",
+ "commonware-codec",
+ "libfuzzer-sys",
+ "paste",
+ "thiserror 2.0.12",
 ]
 
 [[package]]

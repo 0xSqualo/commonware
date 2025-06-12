@@ -1,5 +1,5 @@
 [package]
-name = "commonware-codec-fuzz"
+name = "commonware-fuzz"
 version = "0.0.1"
 publish = false
 edition = "2021"
@@ -8,17 +8,15 @@ edition = "2021"
 cargo-fuzz = true
 
 [dependencies]
+commonware-codec = { workspace = true }
 libfuzzer-sys = { workspace = true }
 bytes = { workspace = true }
 arbitrary = { workspace = true }
 thiserror = { workspace = true }
 paste = { workspace = true }
 
-[dependencies.commonware-codec]
-path = ".."
-
 [[bin]]
-name = "roundtrip"
+name = "codec-roundtrip"
 path = "fuzz_targets/codec_roundtrip.rs"
 test = false
 doc = false

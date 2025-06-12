@@ -16,9 +16,7 @@ members = [
     "examples/flood",
     "examples/log",
     "examples/vrf",
-
-    # Fuzz builds
-    "codec/fuzz",
+    "fuzz",
 ]
 resolver = "2"
 

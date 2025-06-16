@@ -18,7 +18,7 @@ members = [
     "examples/vrf",
 
     # Fuzz builds
-    "codec/fuzz",
+    "codec",
 ]
 resolver = "2"
 

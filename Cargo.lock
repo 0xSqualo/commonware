@@ -995,18 +995,8 @@ dependencies = [
 name = "commonware-codec"
 version = "0.0.54"
 dependencies = [
- "bytes",
- "paste",
- "thiserror 2.0.12",
-]
-
-[[package]]
-name = "commonware-codec-fuzz"
-version = "0.0.1"
-dependencies = [
  "arbitrary",
  "bytes",
- "commonware-codec",
  "libfuzzer-sys",
  "paste",
  "thiserror 2.0.12",

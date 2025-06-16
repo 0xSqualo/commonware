@@ -1,5 +1,6 @@
 #![no_main]
 
+
 use arbitrary::Arbitrary;
 use libfuzzer_sys::fuzz_target;
 
@@ -93,8 +94,11 @@ fn roundtrip_map<K, V>(map: &HashMap<K, V>, range_cfg: RangeCfg, k_cfg: K::Cfg, 
 where
     K: Write + EncodeSize + Read + Clone + Ord + Hash + Eq + std::fmt::Debug + PartialEq,
     V: Write + EncodeSize + Read + Clone + std::fmt::Debug + PartialEq,
-    HashMap<K, V>:
-        Read<Cfg = (RangeCfg, (K::Cfg, V::Cfg))> + std::fmt::Debug + PartialEq + Write + EncodeSize,
+    HashMap<K, V>: Read<Cfg = (RangeCfg, (K::Cfg, V::Cfg))>
+        + std::fmt::Debug
+        + PartialEq
+        + Write
+        + EncodeSize,
 {
     let encoded = map.encode();
     assert_eq!(encoded.len(), map.encode_size());

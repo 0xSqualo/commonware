@@ -14,3 +14,15 @@ documentation = "https://docs.rs/commonware-codec"
 thiserror = { workspace = true }
 bytes = { workspace = true }
 paste = { workspace = true }
+libfuzzer-sys = { workspace = true }
+arbitrary = { workspace = true }
+
+[package.metadata]
+cargo-fuzz = true
+
+[[bin]]
+name = "roundtrip"
+path = "fuzz_targets/codec_roundtrip.rs"
+test = false
+doc = false
+bench = false
